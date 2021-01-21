@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id 'groovy'
+}
+
+sourceCompatibility = 13
+targetCompatibility = 13
+
+group 'io.baris.reactive'
+version '0.0.1'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'io.projectreactor:reactor-core:3.4.2'
+    implementation 'io.projectreactor:reactor-test:3.4.2'
+
+    testCompile(
+            'junit:junit:4.12',
+            'org.codehaus.groovy:groovy-all:2.4.4',
+            'org.spockframework:spock-core:1.0-groovy-2.4'
+    )
+}
